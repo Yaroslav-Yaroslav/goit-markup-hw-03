@@ -64,7 +64,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
-  outline: 2px solid tomato;
 }
 
 /* LOGO */
@@ -140,6 +139,7 @@ img {
 
 /* HERO */
 /* ТИМЧАСОВИЙ ФОНОВИЙ КОЛІР!!!!!!! */
+
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -159,6 +159,7 @@ img {
 }
 
 /* SECTION */
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -192,7 +193,6 @@ img {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
 .button.secondary {
   padding: 6px 22px;
 
@@ -213,7 +213,9 @@ img {
   color: var(--wight-color);
   background-color: var(--accent-color);
 }
+
 /* FEATURE */
+
 .section.features {
   padding-bottom: 0;
 }
@@ -222,7 +224,7 @@ img {
   gap: 30px;
 }
 .feature-item {
-  width: calc((100%-90px) / 4);
+  width: calc((100% - 90px) / 4);
 }
 
 .feature-subtitle {
@@ -235,11 +237,23 @@ img {
   line-height: 1.71;
 }
 
+/* SPECIFICS */
+.specifics-list {
+  display: flex;
+  gap: 30px;
+}
+.specifics-item {
+  width: calc((100% - 60px) / 3);
+}
+
 /* OUR TEAM */
+.team-list {
+  display: flex;
+  gap: 30px;
+}
 
 .team-card {
-  width: 270px;
-  height: 368px;
+  width: calc((100% - 90px) / 4);
 
   background-color: var(--wight-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -278,7 +292,7 @@ img {
 }
 
 .logo-footer {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -298,7 +312,32 @@ img {
 
 /* PORTFOLIO */
 
+.filter-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.project-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project-wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .project-title {
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
