@@ -21,7 +21,23 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .list {
+  padding-left: 0;
+  margin: 0;
   list-style: none;
 }
 .link {
@@ -42,9 +58,19 @@ body {
   overflow: hidden;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  outline: 2px solid tomato;
+}
+
 /* LOGO */
 
 .logo {
+  display: inline-block;
   color: #000000;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -60,7 +86,33 @@ body {
 
 /* HEADER */
 
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+}
+.site-nav {
+  display: flex;
+  gap: 50px;
+}
+.contact-list {
+  display: flex;
+  gap: 50px;
+}
 .site-nav .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -74,6 +126,8 @@ body {
   color: var(--accent-color);
 }
 .contact-link {
+  padding: 32px 0;
+
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -87,20 +141,31 @@ body {
 /* HERO */
 /* ТИМЧАСОВИЙ ФОНОВИЙ КОЛІР!!!!!!! */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--footer-backgraund-color);
+  text-align: center;
 }
 .hero-title {
+  margin: 0 auto 30px;
+  max-width: 696px;
   color: var(--wight-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 /* SECTION */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .section-title {
+  margin-bottom: 50px;
+
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.17;
@@ -110,12 +175,14 @@ body {
 /* BUTTON */
 
 .button {
-  font-family: inherit;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-align: center;
 }
 .button.primary {
+  padding: 10px 32px;
+
   color: var(--wight-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -127,6 +194,8 @@ body {
 }
 
 .button.secondary {
+  padding: 6px 22px;
+
   color: var(--title-text-color);
   background-color: var(--secondary-backgraund-color);
   font-weight: 500;
@@ -136,6 +205,8 @@ body {
 .button.secondary.current {
   color: var(--wight-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button.secondary:hover,
 .button.secondary:focus {
@@ -143,19 +214,45 @@ body {
   background-color: var(--accent-color);
 }
 /* FEATURE */
+.section.features {
+  padding-bottom: 0;
+}
+.features {
+  display: flex;
+  gap: 30px;
+}
+.feature-item {
+  width: calc((100%-90px) / 4);
+}
 
 .feature-subtitle {
+  margin-bottom: 10px;
   color: var(--title-text-color);
   line-height: 1.14;
   text-transform: uppercase;
 }
 .feature-text {
-  line-height: 1.71px;
+  line-height: 1.71;
 }
 
 /* OUR TEAM */
 
+.team-card {
+  width: 270px;
+  height: 368px;
+
+  background-color: var(--wight-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
 .section-subtitle {
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -168,17 +265,23 @@ body {
 .team {
   background-color: var(--secondary-backgraund-color);
 }
-.team-card {
-  background-color: var(--wight-color);
-}
 
 /* FOOTER */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--footer-backgraund-color);
 }
 .address {
   font-style: normal;
+}
+
+.logo-footer {
+  margin-bottom: 30px;
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .map {
   color: var(--wight-color);
