@@ -219,7 +219,7 @@ img {
 .section.features {
   padding-bottom: 0;
 }
-.features {
+.feature-list {
   display: flex;
   gap: 30px;
 }
